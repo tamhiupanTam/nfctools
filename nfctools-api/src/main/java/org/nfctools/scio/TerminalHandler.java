@@ -18,15 +18,17 @@ package org.nfctools.scio;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.smartcardio.CardException;
 import javax.smartcardio.CardTerminal;
 import javax.smartcardio.TerminalFactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TerminalHandler {
 
-	private Logger log = Logger.getLogger(TerminalHandler.class.getName());
+	private Logger log = LoggerFactory.getLogger(TerminalHandler.class);
 	private Collection<Terminal> knownTerminals = new HashSet<Terminal>();
 
 	public void addTerminal(Terminal terminal) {
